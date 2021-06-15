@@ -48,7 +48,7 @@ export function getReferralAccountId(public_key: string): string  | null {
 
 
 /**
- * Add referral key to the referer account.
+ * Add referral key to the referrer account.
  * @param account_id 
  * @param public_key 
  */
@@ -58,8 +58,8 @@ export function addReferralKey(account_id: string, public_key: string): void {
 
 
 /**
- * Get the referral points earned by the given referer
- * @param account_id  The account id for referer.
+ * Get the referral points earned by the given referrer
+ * @param account_id  The account id for referrer.
  * @returns AccountPoints
  */
 export function getAccountPoints(account_id: string): AccountPoints {
@@ -72,11 +72,11 @@ export function getAccountPoints(account_id: string): AccountPoints {
 
 
 /**
- * Sign guest book with the given referer public key.
- * Each time the guest book is signed by referer public key, the referer earns 1 point.
- * @param account_id  Referer account Id.
- * @param referee_id  Referer Id
- * @param public_key  Referer public key.
+ * Sign guest book with the given referrer public key.
+ * Each time the guest book is signed by the referrer's public key, the referrer earns 1 point.
+ * @param account_id  Referrer account Id.
+ * @param referee_id  Referrer Id
+ * @param public_key  Referrer public key.
  */
 export function signBookWithGuestKey(account_id: string, referee_id: string, public_key: string): void {
 
